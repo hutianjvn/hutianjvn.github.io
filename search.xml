@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[test]]></title>
+    <url>%2Fpost%2Ftest%2F</url>
+    <content type="text"><![CDATA[this is a test]]></content>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hello]]></title>
     <url>%2Fpost%2FHello%2F</url>
     <content type="text"></content>
