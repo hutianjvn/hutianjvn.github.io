@@ -104,11 +104,11 @@
 <meta name="keywords" content="Number Theory">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于质数">
-<meta property="og:url" content="http://yoursite.com/post/质数——Prime/index.html">
+<meta property="og:url" content="http://yoursite.com/post/质数/index.html">
 <meta property="og:site_name" content="Hu Tianjvn&#39;s blog">
 <meta property="og:description" content="质数的定义：　　若一个正整数无法被除了被除了1和它自身之外的任何自然数整除，则称该数为质数（素数），否则则称该正整数为合数。 　　在整个自然数集合中，质数的数量不多，分布比较稀疏，对于一个足够大的整数 $ N $ 不超过 $ N $ 的质数大约有 $ N  /ln N $ 个，即每 $ \ln N $ 个数中大约有一个质数。 质数的判定试除法　　若一个正整数 $ N $ 为合数，则存在一个能整除">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-24T02:25:09.013Z">
+<meta property="og:updated_time" content="2019-05-24T03:33:47.797Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于质数">
 <meta name="twitter:description" content="质数的定义：　　若一个正整数无法被除了被除了1和它自身之外的任何自然数整除，则称该数为质数（素数），否则则称该正整数为合数。 　　在整个自然数集合中，质数的数量不多，分布比较稀疏，对于一个足够大的整数 $ N $ 不超过 $ N $ 的质数大约有 $ N  /ln N $ 个，即每 $ \ln N $ 个数中大约有一个质数。 质数的判定试除法　　若一个正整数 $ N $ 为合数，则存在一个能整除">
@@ -119,7 +119,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/post/质数——Prime/">
+  <link rel="canonical" href="http://yoursite.com/post/质数/">
 
 
 
@@ -378,7 +378,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/post/质数——Prime/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/post/质数/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content>
@@ -438,7 +438,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-24 10:25:09" itemprop="dateModified" datetime="2019-05-24T10:25:09+08:00">2019-05-24</time>
+                <time title="修改时间：2019-05-24 11:33:47" itemprop="dateModified" datetime="2019-05-24T11:33:47+08:00">2019-05-24</time>
               
             
           </span>
@@ -473,7 +473,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">949</span>
+                <span title="本文字数">2k</span>
               
 
               
@@ -487,7 +487,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1 分钟</span>
+                <span title="阅读时长">2 分钟</span>
               
             </div>
           
@@ -509,17 +509,30 @@
       
         <h2 id="质数的定义："><a href="#质数的定义：" class="headerlink" title="质数的定义："></a>质数的定义：</h2><p>　　若一个正整数无法被除了被除了1和它自身之外的任何自然数整除，则称该数为质数（素数），否则则称该正整数为合数。</p>
 <p>　　在整个自然数集合中，质数的数量不多，分布比较稀疏，对于一个足够大的整数 $ N $ 不超过 $ N $ 的质数大约有 $ N  /ln N $ 个，即每 $ \ln N $ 个数中大约有一个质数。</p>
-<h2 id="质数的判定"><a href="#质数的判定" class="headerlink" title="质数的判定"></a>质数的判定</h2><h3 id="试除法"><a href="#试除法" class="headerlink" title="试除法"></a>试除法</h3><p>　　若一个正整数 $ N $ 为合数，则存在一个能整除 $ N $ 的数 $ T $ ，其中 $ 2 \le T \le \sqrt(N) $ 。</p>
-<h3 id="证明："><a href="#证明：" class="headerlink" title="证明："></a>证明：</h3><p>　由定义得，因为 <em>N</em> 是合数，所以存在一个能整除 $ N $ 的数 $ M $ ，其中 $ 2 \le <em>M</em> \le <em>N</em> - 1 $</p>
-<p>　反证法,假设命题不成立，那么这样的数 $ M $ 一定满足 $ \sqrt(N) + 1 \le <em>M</em> \le <em>N</em> - 1 $ 。</p>
-<p>  因为 $ M $ 能整除 $ N $ ， 所以它们的商 $ N/M $ 也能整除 $ N $ 。 而 $ 2 \le N/M \le \sqrt(N) $ ，令 $ T = N/M $ ，这与假设矛盾。故假设不成立，原命题成立。</p>
+<h2 id="质数的判定"><a href="#质数的判定" class="headerlink" title="质数的判定"></a>质数的判定</h2><h3 id="试除法"><a href="#试除法" class="headerlink" title="试除法"></a>试除法</h3><p>　　若一个正整数 $ N $ 为合数，则存在一个能整除 $ N $ 的数 $ T $ ，其中 $ 2 \le T \le \sqrt N $ 。</p>
+<h3 id="证明："><a href="#证明：" class="headerlink" title="证明："></a>证明：</h3><p>　由定义得，因为 $ N $ 是合数，所以存在一个能整除 $ N $ 的数 $ M $ ，其中 $ 2 \le M \le N-1 $</p>
+<p>　反证法,假设命题不成立，那么这样的数 $ M $ 一定满足 $ \sqrt N + 1 \le M \le N-1 $ 。</p>
+<p>  因为 $ M $ 能整除 $ N $ ， 所以它们的商 $ N/M $ 也能整除 $ N $ 。 而 $ 2 \le N/M \le \sqrt N $ ，令 $ T = N/M $ ，这与假设矛盾。故假设不成立，原命题成立。</p>
 <p>  证毕</p>
-<p>  根据上述命题，我们只需要扫描 $ 2 ~ \sqrt(N) $ 之间的所有整数，依次检查它们是否能整除 $ N $ ，若都不能整除，则 $ N $ 为质数，否则 $ N $ 为合数。试除法的时间复杂度为 $ O(\sqrt(N)) $ 。</p>
+<p>  根据上述命题，我们只需要扫描 $ 2  $ ~ $ \sqrt(N) $ 之间的所有整数，依次检查它们是否能整除 $ N $ ，若都不能整除，则 $ N $ 为质数，否则 $ N $ 为合数。试除法的时间复杂度为 $ O(\sqrt N) $ 。</p>
   <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isPrime</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">2</span>; i&lt;=<span class="built_in">sqrt</span>(n); ++i)</span><br><span class="line">        <span class="keyword">if</span> (!(n%i))</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>  “试除法”作为最简单也最经典的确定性算法，是我们在算法竞赛中通常会使用的方法。有一些效率更高的随机性算法，例如“Miller-Robbin”等，有较小的概率把合数判定为质数，但多次判定合起来的错误概率趋近与零，感兴趣的读者可以自行查阅并学习。</p>
-<h2 id="质数的筛选"><a href="#质数的筛选" class="headerlink" title="质数的筛选"></a>质数的筛选</h2><p>  给定一个整数 $ N $ ，求出 $ 1 ~ N $ 之间的所有质数，称为质数的筛选问题。</p>
-<h3 id="Eratosthenes-筛法"><a href="#Eratosthenes-筛法" class="headerlink" title="Eratosthenes 筛法"></a>Eratosthenes 筛法</h3>
+<h2 id="质数的筛选"><a href="#质数的筛选" class="headerlink" title="质数的筛选"></a>质数的筛选</h2><p>  给定一个整数 $ N $ ，求出 $ 1 $ ~ $ N $ 之间的所有质数，称为质数的筛选问题。</p>
+<h3 id="Eratosthenes-筛法"><a href="#Eratosthenes-筛法" class="headerlink" title="Eratosthenes 筛法"></a>Eratosthenes 筛法</h3><p>  Eratosthenes 筛法基于这样的想法：任意整数 $ x $ 的倍数 $ 2x,3x, … $ 都不是质数。根据质数的定义，上述命题显然成立。</p>
+<p>  我们可以从 $ 2 $ 开始，由小到大扫描每个数 $ x $ ，把它的倍数 $ 2x,3x, … \lfloor N/x \rfloor * x\ $ 标记为合数。当扫描到一个数时，若它尚未被标记，则它不能被 $ 2 ~ x-1 $ 之间的任何数整除，该数就是质数。<br>  Eratosthenes 筛法的进行过程如下：</p>
+<blockquote>
+<pre><code>$ 2,3,4,5,6,7,8,9,10,11,12, … $
+$ 2,3,4,5,6,7,8,9,10,11,12, … $
+$ 2,3,4,5,6,7,8,9,10,11,12, … $
+$ 2,3,4,5,6,7,8,9,10,11,12, … $
+$ 2,3,4,5,6,7,8,9,10,11,12, … $</code></pre></blockquote>
+<p>  另外，我们可以发现，$ 2 $ 和 $ 3 $ 都会把 $ 6 $ 标记为合数。实际上，小于 $ x^{2} $ 的 $ x $ 的倍数在更小的数时就已经被标记过了。因此，我们可以对 Eratosthenes 筛法进行优化，对于每个数 $ x $ ，我们只需从 $ x^{2} $ 开始，把 $ x^{2}, (x+1)*x, … , \lfloor N/x \rfloor * x\ $ 标记为合数即可。</p>
+  <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">SeekPrimes</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="built_in">memset</span>(v,<span class="number">0</span>,sizoef(v));</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">2</span>; i&lt;=n; ++i)</span><br><span class="line">    <span class="keyword">if</span> (!v[i])</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> j=i; j&lt;=n/i; ++j)</span><br><span class="line">        v[i*j] = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>  Eratosthenes 筛法的时间复杂度为 $ O( \sum_{质数p \le N}{\frac{N}{p}} ) = O(N \log \log N) $ 。该算法实现简单，效率已经非常接近线性，是算法竞赛中最常用的质数筛法。</p>
+<h3 id="线性筛法（Euler筛）"><a href="#线性筛法（Euler筛）" class="headerlink" title="线性筛法（Euler筛）"></a>线性筛法（Euler筛）</h3><p>  即使在优化后，Eratosthenes 筛法任然会重复标记合数。例如 $ 12 $ 既会被 $ 2 $ 又会被  $ 3 $ 标记，在标记 $ 2 $ 倍数时， $ 12 = 6 * 2 $ ，在标记 $ 3 $ 的倍数时， $ 12 = 4 * 3 $ 。其根本原因是我们没有确定出唯一的产生 $ 12 $ 的方式。</p>
+
       
     </div>
 
@@ -788,7 +801,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#质数的定义："><span class="nav-number">1.</span> <span class="nav-text">质数的定义：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#质数的判定"><span class="nav-number">2.</span> <span class="nav-text">质数的判定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#试除法"><span class="nav-number">2.1.</span> <span class="nav-text">试除法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#证明："><span class="nav-number">2.2.</span> <span class="nav-text">证明：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#质数的筛选"><span class="nav-number">3.</span> <span class="nav-text">质数的筛选</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Eratosthenes-筛法"><span class="nav-number">3.1.</span> <span class="nav-text">Eratosthenes 筛法</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#质数的定义："><span class="nav-number">1.</span> <span class="nav-text">质数的定义：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#质数的判定"><span class="nav-number">2.</span> <span class="nav-text">质数的判定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#试除法"><span class="nav-number">2.1.</span> <span class="nav-text">试除法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#证明："><span class="nav-number">2.2.</span> <span class="nav-text">证明：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#质数的筛选"><span class="nav-number">3.</span> <span class="nav-text">质数的筛选</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Eratosthenes-筛法"><span class="nav-number">3.1.</span> <span class="nav-text">Eratosthenes 筛法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线性筛法（Euler筛）"><span class="nav-number">3.2.</span> <span class="nav-text">线性筛法（Euler筛）</span></a></li></ol></li></ol></div>
             
 
           </div>
