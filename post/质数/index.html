@@ -108,7 +108,7 @@
 <meta property="og:site_name" content="Hu Tianjvn&#39;s blog">
 <meta property="og:description" content="质数的定义：　　若一个正整数无法被除了被除了1和它自身之外的任何自然数整除，则称该数为质数（素数），否则则称该正整数为合数。 　　在整个自然数集合中，质数的数量不多，分布比较稀疏，对于一个足够大的整数 $ N $ 不超过 $ N $ 的质数大约有 $ N  /ln N $ 个，即每 $ \ln N $ 个数中大约有一个质数。 质数的判定试除法　　若一个正整数 $ N $ 为合数，则存在一个能整除">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-24T03:33:47.797Z">
+<meta property="og:updated_time" content="2019-05-24T05:04:44.673Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于质数">
 <meta name="twitter:description" content="质数的定义：　　若一个正整数无法被除了被除了1和它自身之外的任何自然数整除，则称该数为质数（素数），否则则称该正整数为合数。 　　在整个自然数集合中，质数的数量不多，分布比较稀疏，对于一个足够大的整数 $ N $ 不超过 $ N $ 的质数大约有 $ N  /ln N $ 个，即每 $ \ln N $ 个数中大约有一个质数。 质数的判定试除法　　若一个正整数 $ N $ 为合数，则存在一个能整除">
@@ -438,7 +438,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-24 11:33:47" itemprop="dateModified" datetime="2019-05-24T11:33:47+08:00">2019-05-24</time>
+                <time title="修改时间：2019-05-24 13:04:44" itemprop="dateModified" datetime="2019-05-24T13:04:44+08:00">2019-05-24</time>
               
             
           </span>
@@ -473,7 +473,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2k</span>
+                <span title="本文字数">2.4k</span>
               
 
               
@@ -528,10 +528,14 @@ $ 2,3,4,5,6,7,8,9,10,11,12, … $
 $ 2,3,4,5,6,7,8,9,10,11,12, … $
 $ 2,3,4,5,6,7,8,9,10,11,12, … $</code></pre></blockquote>
 <p>  另外，我们可以发现，$ 2 $ 和 $ 3 $ 都会把 $ 6 $ 标记为合数。实际上，小于 $ x^{2} $ 的 $ x $ 的倍数在更小的数时就已经被标记过了。因此，我们可以对 Eratosthenes 筛法进行优化，对于每个数 $ x $ ，我们只需从 $ x^{2} $ 开始，把 $ x^{2}, (x+1)*x, … , \lfloor N/x \rfloor * x\ $ 标记为合数即可。</p>
-  <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">SeekPrimes</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="built_in">memset</span>(v,<span class="number">0</span>,sizoef(v));</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">2</span>; i&lt;=n; ++i)</span><br><span class="line">    <span class="keyword">if</span> (!v[i])</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> j=i; j&lt;=n/i; ++j)</span><br><span class="line">        v[i*j] = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+  <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">SeekPrimes</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="built_in">memset</span>(vis,<span class="number">0</span>,sizoef(vis));</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">2</span>; i&lt;=n; ++i)</span><br><span class="line">    <span class="keyword">if</span> (!vis[i])</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> j=i; j&lt;=n/i; ++j)</span><br><span class="line">        vis[i*j] = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>  Eratosthenes 筛法的时间复杂度为 $ O( \sum_{质数p \le N}{\frac{N}{p}} ) = O(N \log \log N) $ 。该算法实现简单，效率已经非常接近线性，是算法竞赛中最常用的质数筛法。</p>
 <h3 id="线性筛法（Euler筛）"><a href="#线性筛法（Euler筛）" class="headerlink" title="线性筛法（Euler筛）"></a>线性筛法（Euler筛）</h3><p>  即使在优化后，Eratosthenes 筛法任然会重复标记合数。例如 $ 12 $ 既会被 $ 2 $ 又会被  $ 3 $ 标记，在标记 $ 2 $ 倍数时， $ 12 = 6 * 2 $ ，在标记 $ 3 $ 的倍数时， $ 12 = 4 * 3 $ 。其根本原因是我们没有确定出唯一的产生 $ 12 $ 的方式。</p>
+<p>  线性筛法通过“从大到小累积质因子”的方式标记每个合数，既让 $ 12 $ 只有  $ 3 * 2 * 2 $ 一种产生方式。设数组 $ vis $ 记录每个数的最小质因子，我们照以下步骤维护 $ vis $ 。</p>
+<p>  1.依次考虑 $ 2 $ ~  $ N $ 之间的每一个数  $ i $ 。</p>
+<p>  2.若 $ vis[i] == i $ ，说明 $ i $ 是质数，把它保存下来。</p>
+<p>  3.扫描不大于 $ vis[i] $ 的每个质数 $ p $ ，令  $ vis[i*p] = p $ 。也就是在 $ i $ 的基础上累积一个质因子 $ p $ 。也就是在 $ i $ 的基础上累积一个质因子 $ p $ 。因为 $ p \le vis[i] $ ，所以 $ p $ 就是合数 $ i * p $ 的最小质因子。</p>
 
       
     </div>
