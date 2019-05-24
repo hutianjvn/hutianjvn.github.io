@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[test]]></title>
-    <url>%2Fpost%2Ftest%2F</url>
-    <content type="text"><![CDATA[this is a test]]></content>
-      <tags>
-        <tag>test</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Hello]]></title>
     <url>%2Fpost%2FHello%2F</url>
     <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Prime]]></title>
+    <url>%2Fpost%2F%E8%B4%A8%E6%95%B0%E2%80%94%E2%80%94Prime%2F</url>
+    <content type="text"><![CDATA[关于质数质数的定义： 若一个正整数无法被除了被除了1和它自身之外的任何自然数整除，则称该数为质数（素数），否则则称该正整数为合数。 在整个自然数集合中，质数的数量不多，分布比较稀疏，对于一个足够大的整数 N 不超过 N 的质数大约有 N / ln N 个，即每 ln N 个数中大约有一个质数。 - 质数的判定试除法 若一个正整数 $ N $ 为合数，则存在一个能整除 $ N $ 的数 $ T $ ，其中 $ 2 \le T \le \sqrt(N) $ 。 证明： 由定义得，因为 N 是合数，所以存在一个能整除 N 的数 M ，其中2 ≤ M ≤ N - 1. 反证法。假设命题不成立，那么这样的数 M 一定满足 \sqrt(N) + 1 ≤ M ≤ N - 1。 因为 M 能整除 N]]></content>
+      <tags>
+        <tag>Number Theory</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Hello World]]></title>
