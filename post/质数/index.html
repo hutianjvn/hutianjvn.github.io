@@ -100,18 +100,18 @@
 
 
 
-  <meta name="description" content="质数的定义：　　若一个正整数无法被除了被除了1和它自身之外的任何自然数整除，则称该数为质数（素数），否则则称该正整数为合数。 　　在整个自然数集合中，质数的数量不多，分布比较稀疏，对于一个足够大的整数 $ N $ 不超过 $ N $ 的质数大约有 $ N  /ln N $ 个，即每 $ \ln N $ 个数中大约有一个质数。 质数的判定试除法　　若一个正整数 $ N $ 为合数，则存在一个能整除">
+  <meta name="description" content="No description QAQ">
 <meta name="keywords" content="Number Theory">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于质数">
 <meta property="og:url" content="http://yoursite.com/post/质数/index.html">
 <meta property="og:site_name" content="Hu Tianjvn&#39;s blog">
-<meta property="og:description" content="质数的定义：　　若一个正整数无法被除了被除了1和它自身之外的任何自然数整除，则称该数为质数（素数），否则则称该正整数为合数。 　　在整个自然数集合中，质数的数量不多，分布比较稀疏，对于一个足够大的整数 $ N $ 不超过 $ N $ 的质数大约有 $ N  /ln N $ 个，即每 $ \ln N $ 个数中大约有一个质数。 质数的判定试除法　　若一个正整数 $ N $ 为合数，则存在一个能整除">
+<meta property="og:description" content="No description QAQ">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-27T03:19:11.773Z">
+<meta property="og:updated_time" content="2019-05-28T03:19:23.424Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于质数">
-<meta name="twitter:description" content="质数的定义：　　若一个正整数无法被除了被除了1和它自身之外的任何自然数整除，则称该数为质数（素数），否则则称该正整数为合数。 　　在整个自然数集合中，质数的数量不多，分布比较稀疏，对于一个足够大的整数 $ N $ 不超过 $ N $ 的质数大约有 $ N  /ln N $ 个，即每 $ \ln N $ 个数中大约有一个质数。 质数的判定试除法　　若一个正整数 $ N $ 为合数，则存在一个能整除">
+<meta name="twitter:description" content="No description QAQ">
 
 
 
@@ -438,7 +438,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-27 11:19:11" itemprop="dateModified" datetime="2019-05-27T11:19:11+08:00">2019-05-27</time>
+                <time title="修改时间：2019-05-28 11:19:23" itemprop="dateModified" datetime="2019-05-28T11:19:23+08:00">2019-05-28</time>
               
             
           </span>
@@ -473,7 +473,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">3k</span>
+                <span title="本文字数">6.2k</span>
               
 
               
@@ -487,11 +487,13 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">3 分钟</span>
+                <span title="阅读时长">6 分钟</span>
               
             </div>
           
 
+          
+            <div class="post-description"><center>No description QAQ<center></center></center></div>
           
 
         </div>
@@ -539,8 +541,24 @@
 <p>  每个合数 $ i * p $ 只会被它最小的质因子 $ p $ 筛一次，时间复杂度为 $ O(N) $ 。</p>
   <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> vis[Max_N],prime[Max_N];</span><br><span class="line"><span class="keyword">int</span> m;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">SeekPrimes</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">memset</span>(vis, <span class="number">0</span>, <span class="keyword">sizeof</span>(vis));</span><br><span class="line">	m = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">2</span>; i&lt;=n; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (!vis[i])</span><br><span class="line">			vis[i] = prime[++m] = i;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">1</span>; j&lt;=m; ++j)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (prime[j]&gt;vis[i] || prime[j]&gt;n/i)</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			vis[i*prime[j]] = prime[j];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="质因数分解"><a href="#质因数分解" class="headerlink" title="质因数分解"></a>质因数分解</h2><h3 id="算术基本定理"><a href="#算术基本定理" class="headerlink" title="算术基本定理"></a>算术基本定理</h3><p>  任何一个大于 $ 1 $ 的正整数都能唯一的分解为有限个正质数之积，可写作：<br>$$<br>    N = p_{1}^{c_1} p_2^{c_2} … p_m^{c_m}<br>$$<br>  其中 $ c_{i} $ 都是正整数， $ p_{i} $ 都是正质数，且满足 $ p_{1} &lt; p_{2} &lt; … p_{m} $ 。</p>
+<h3 id="Miller-rabin"><a href="#Miller-rabin" class="headerlink" title="Miller_rabin"></a>Miller_rabin</h3><p>  根据Fermat小定理，如果 $ p $ 为质数，且 $ a $ 与 $ p $ 互质，那么有<br>$$<br>a^{p-1} \equiv 1 \pmod{p}<br>$$<br>  如果我们让 $ a &lt; n $ ，那么只需要满足 $ p $ 为质数即可。但是反过来，满足此公式的 $ p $ 不一定是质数。但是幸运的是，对于大多数的 $ p $ ，Fermat小定理的逆定理是对的，但是为了提高正确率，我们必须进行二次探测。</p>
+<p>  若 $ n $ 为质数，并且<br>$$<br>x^{2} \equiv 1 (mod\ \ n)<br>$$<br>  那么 $ x = 1 $ 或 $ x = n-1 $ 。因为 $ x^{2} = 1 $ 则 $ x = 1 $ 或 $ x = -1 $ ，而模意义下的 $ -1 $ 就是 $ n-1 $。</p>
+<p>  我们来证明一下，为什么 $ x^{2} \equiv 1 \pmod{p} $ ，且 $ x \neq 1 \pmod{p} $ ，且 $ x \neq p-1 \pmod{p} $ 时 $ p $ 不是质数。<br>  证明：<br>$$<br>x^{2} \equiv 1 \pmod{p}<br>$$<br>$$<br>x^{2} - 1 \equiv 0 \pmod{p}<br>$$<br>$$<br>(x-1)(x+1) \equiv 0 \pmod{p}<br>$$<br>  所以有 $ p|(x-1) $ 或 $ p|(x+1) $ 或 $ p|(x+1)(x-1) $ </p>
+<p>$$<br>\because x \neq p-1 \pmod{p}<br>$$<br>$$<br>\therefore (x+1) mod\ \ p \neq 0 ， p \nmid x-1<br>$$<br>$$<br>\therefore p \mid (x+1)(x-1)<br>$$<br>  由此我们可以发现 $ x+1 $ 和 $ x-1 $ 都不包含 $ p $ 的所有因子，而它们的乘积却含有 $ p $ 的全部因子，那么在相乘时 $ x+1 $ 和 $ x-1 $ 分别提供了一个非 $ 1 $ 非 $ p $ 的因子，才能使乘积是 $ p $ 的倍数，当然这两个因子可能相同。</p>
+<p>  那么，我们可以证明出 $ p $ 可以表示为两个非 $ 1 $ 非 $ p $ 的数的乘积，那么就证明了 $ p $ 是合数而不是质数了。</p>
+<p>  我们可以根据这个性质进行二次探测。</p>
+<p>  如果我们设要测试的数为 $ n $ ，若 $ n $ 是 $ 2 $ 或是偶数，那么我们可以直接判断 $ n $ 是否为质数，否则令 $ p = n $ ，将$ p $ 分解成 $ u * 2^{k} $ ，枚举 $ k $ 来不断进行二次探测。则那么我们随机一个底数$ x $，快速幂求出 $ x^{u}\ \ mod\ \ n $ ，然后不断的 $ x * x\ \ mod\ \ p $ 来进行二次探测。</p>
+<p>  至于为什么在代码中这么做是对的，我曾经看到一个很好的解释，在这里分享一下。<br>$$<br>a^{p-1} \equiv 1 \pmod{p}<br>$$<br>$$<br>a^{u * 2^{k}} \equiv 1 \pmod{p}<br>$$<br>$$<br>a^{u * 2^{k-1}} * a^{u * 2^{k-1}} \equiv 1 \pmod{p}<br>$$</p>
+<p>那么我们把 $ a^{u * 2^{k-1}} $ 看作 $ x $ ，那么就是在当前$ a^{u*2^{k-1}} \equiv 1 \pmod{p} $ 的时候验证是否是 $ p-1 $ 或者 $ 1 $ 即可。另外最后别忘了用费马小定理来判断一下，代码中的 $ x $ 其实的 $ x^{p-1} \equiv 1 \pmod{p} $ 之后的结果，所以只需要看最后的 $ x $ 是否是 $ 1 $ 即可。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Lint <span class="title">Random</span><span class="params">(Lint n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> ((<span class="keyword">double</span>)rand()/RAND_MAX*n+<span class="number">0.5</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">Lint <span class="title">QuickMul</span><span class="params">(Lint Base, Lint Index, Lint mod)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Lint ans=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (Index)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (Index&amp;<span class="number">1</span>)</span><br><span class="line">            ans=(ans+Base)%mod;</span><br><span class="line">        Index&gt;&gt;=<span class="number">1</span>,</span><br><span class="line">        Base=(Base&lt;&lt;<span class="number">1</span>)%mod;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">Lint <span class="title">QuickPow</span><span class="params">(Lint Base,Lint Index,Lint mod)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Lint ans=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(Index)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (Index&amp;<span class="number">1</span>)</span><br><span class="line">            ans=QuickMul(ans,Base,mod);</span><br><span class="line">        Index&gt;&gt;=<span class="number">1</span>,</span><br><span class="line">        Base=QuickMul(Base,Base,mod);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">witness</span><span class="params">(Lint a,Lint n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Lint tem=n<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">int</span> j=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (!(tem&amp;<span class="number">1</span>))</span><br><span class="line">        tem&gt;&gt;=<span class="number">1</span>,++j;</span><br><span class="line">    Lint x=QuickPow(a,tem,n);</span><br><span class="line">    <span class="keyword">if</span> (x==<span class="number">1</span> || x==n<span class="number">-1</span>)</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">while</span> (j--)</span><br><span class="line">        <span class="keyword">if</span> ((x=QuickMul(x,x,n))==n<span class="number">-1</span>)</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isPrime</span><span class="params">(Lint n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (n==<span class="number">2</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">if</span> (n&lt;<span class="number">2</span> || !(n&amp;<span class="number">1</span>))</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">for</span> (Rint i=<span class="number">1</span>; i&lt;=<span class="number">20</span>; ++i)</span><br><span class="line">        <span class="keyword">if</span> (!witness(Random(n<span class="number">-2</span>)+<span class="number">1</span>,n))</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h2 id="质因数分解"><a href="#质因数分解" class="headerlink" title="质因数分解"></a>质因数分解</h2><h3 id="算术基本定理"><a href="#算术基本定理" class="headerlink" title="算术基本定理"></a>算术基本定理</h3><p>  任何一个大于 $ 1 $ 的正整数都能唯一的分解为有限个正质数之积，可写作：<br>$$<br>    N = p_{1}^{c_1} p_2^{c_2} … p_m^{c_m}<br>$$<br>  其中 $ c_{i} $ 都是正整数， $ p_{i} $ 都是正质数，且满足 $ p_{1} &lt; p_{2} &lt; … p_{m} $ 。</p>
+<h3 id="试除法-1"><a href="#试除法-1" class="headerlink" title="试除法"></a>试除法</h3><p>  结合质数判定的“试除法”和质数筛选的“Eratosthenes 筛法”，我们可以扫描 $ 2 $ ~ $ \lfloor \sqrt N \rfloor $ 的每个数 $ d $ ，若 $ d $ 能整除 $ N $ ，则从 $ N $ 中除掉所有因子 $ d $ ，同时累计除去的 $ d $ 的个数。</p>
+<p>  因为一个合数的因子一定在扫描到这个合数之前就从 $ N $ 中被除掉了，所以在上述过程中能整除 $ N $ 的一定是质数。最终就得到了质因数分解的结果，易知时间复杂度为 $ O( \sqrt N) $ 。</p>
+<p>  特别的，若 $ N $ 没有被 $ 2 $ ~ $ \sqrt N $ 的数整除，则 $ N $ 是质数，无需分解。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> m,p[Max_M],c[Max_M];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Decomposition</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	m=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">2</span>; i*i&lt;=n; ++i)</span><br><span class="line">		<span class="keyword">if</span> (n%i == <span class="number">0</span>)</span><br><span class="line">			<span class="keyword">for</span> (p[++m] = i, c[m] = <span class="number">0</span>;n%i == <span class="number">0</span>; ++c[m], n/=i);</span><br><span class="line">	<span class="keyword">if</span> (n != <span class="number">0</span>)</span><br><span class="line">		p[++m] = n, c[m] = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Rollard’s-Rho"><a href="#Rollard’s-Rho" class="headerlink" title="Rollard’s Rho"></a>Rollard’s Rho</h3>
       
     </div>
 
@@ -680,7 +698,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -722,7 +740,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -811,7 +831,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#质数的定义："><span class="nav-number">1.</span> <span class="nav-text">质数的定义：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#质数的判定"><span class="nav-number">2.</span> <span class="nav-text">质数的判定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#试除法"><span class="nav-number">2.1.</span> <span class="nav-text">试除法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#证明："><span class="nav-number">2.2.</span> <span class="nav-text">证明：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#质数的筛选"><span class="nav-number">3.</span> <span class="nav-text">质数的筛选</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Eratosthenes-筛法"><span class="nav-number">3.1.</span> <span class="nav-text">Eratosthenes 筛法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线性筛法（Euler筛）"><span class="nav-number">3.2.</span> <span class="nav-text">线性筛法（Euler筛）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#质因数分解"><span class="nav-number">4.</span> <span class="nav-text">质因数分解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#算术基本定理"><span class="nav-number">4.1.</span> <span class="nav-text">算术基本定理</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#质数的定义："><span class="nav-number">1.</span> <span class="nav-text">质数的定义：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#质数的判定"><span class="nav-number">2.</span> <span class="nav-text">质数的判定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#试除法"><span class="nav-number">2.1.</span> <span class="nav-text">试除法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#证明："><span class="nav-number">2.2.</span> <span class="nav-text">证明：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#质数的筛选"><span class="nav-number">3.</span> <span class="nav-text">质数的筛选</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Eratosthenes-筛法"><span class="nav-number">3.1.</span> <span class="nav-text">Eratosthenes 筛法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线性筛法（Euler筛）"><span class="nav-number">3.2.</span> <span class="nav-text">线性筛法（Euler筛）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Miller-rabin"><span class="nav-number">3.3.</span> <span class="nav-text">Miller_rabin</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#质因数分解"><span class="nav-number">4.</span> <span class="nav-text">质因数分解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#算术基本定理"><span class="nav-number">4.1.</span> <span class="nav-text">算术基本定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#试除法-1"><span class="nav-number">4.2.</span> <span class="nav-text">试除法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Rollard’s-Rho"><span class="nav-number">4.3.</span> <span class="nav-text">Rollard’s Rho</span></a></li></ol></li></ol></div>
             
 
           </div>
