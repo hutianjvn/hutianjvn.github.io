@@ -100,6 +100,17 @@
 
 
 
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
   <meta name="description" content="第一题题目大意：第二题题目大意：  用给定的数字，在十进制下找出在 $ A $ 与 $ B $ 之间所有 $ X $ 的倍数的个数，并输出 解题思路：  先看能否暴力，先看 $ X \le limit = 100000 $ 时的情况，我们可以保证枚举次数不会超过 $ 10^{11} / X $ 也就是 $ 1000000 $ 次，在乘上判断是否由给定的数字组成的常数，可以较快的跑出结果。   再看">
 <meta name="keywords" content="Solutions">
 <meta property="og:type" content="article">
