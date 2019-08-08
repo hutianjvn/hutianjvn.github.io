@@ -119,7 +119,7 @@
 <meta property="og:site_name" content="Hu Tianjvn&#39;s blog">
 <meta property="og:description" content="No description QAQ">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-08T07:18:27.675Z">
+<meta property="og:updated_time" content="2019-08-08T07:27:01.483Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于并查集">
 <meta name="twitter:description" content="No description QAQ">
@@ -449,7 +449,7 @@
                 
               
 
-              <time title="创建时间：2019-08-08 14:58:59 / 修改时间：15:18:27" itemprop="dateCreated datePublished" datetime="2019-08-08T14:58:59+08:00">2019-08-08</time>
+              <time title="创建时间：2019-08-08 14:58:59 / 修改时间：15:27:01" itemprop="dateCreated datePublished" datetime="2019-08-08T14:58:59+08:00">2019-08-08</time>
             
 
             
@@ -489,7 +489,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">354</span>
+                <span title="本文字数">544</span>
               
 
               
@@ -529,8 +529,9 @@
 <p>　1. $ Get $ ，查询一个元素属于那个集合。<br>　2. $ Merge $ ，把两个集合合并成一个大集合。</p>
 <p>为了具体实现并查集这种数据结构，我们首先需要定义一个集合的表示方法。在并查集中，我们采用“代表元”法，既<strong>每个集合选择一个固定的元素，作为整个集合的“代表”</strong>。</p>
 <p>其次，我们需要定义归属关系的表示方法。</p>
-<p>第一种思路是维护一个数组f，用  保存元素  所在集合的代表。这种方法可以快速查询元素的归属集合，但在合并时需要修改大量元素的f值，效率很低。</p>
+<p>第一种思路是维护一个数组fa，用  保存元素  所在集合的代表。这种方法可以快速查询元素的归属集合，但在合并时需要修改大量元素的fa值，效率很低。</p>
 <p>第二种思路是<strong>使用一个树形结构存储每个集合，树上的每个节点都是一个元素,树根是整个集合的代表元素</strong>。</p>
+<p>整个并查集实际上是一个森林（若干棵树）。我们任然可以维护一个数组fa来记录这个森林，用  保存  的父亲节点。特别的，令树根的fa值等于自己。这样一来，在合并集合时，只需连接两个树根（令其中一个树根为另一个树根的子节点，既  ）。不过在查询元素归属时，需要从该元素开始，通过fa存储的值不断递归访问父节点，直至树根。为了提高查询效率，并查集引入了路径压缩与按秩合并两种思想。</p>
 
       
     </div>
